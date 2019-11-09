@@ -23,9 +23,15 @@ class Player extends Component {
 
 	}
 	componentDidMount() {
-		const button = this.refs.myButton;
-		setTimeout(button.click(), 2000);
-		
+		const video = document.getElementById("myvideo");
+		if (this.isFullScreenCurrently()){
+			//this.goInFullscreen(video);  
+		} 
+		video.src = Cam3DVideo;
+		setTimeout(function(){
+			document.getElementById('myvideo').play();
+		},1000);
+    video.play();
 	}
 	handleClickFullscreen = () => {
 		if (screenfull.isEnabled) {
@@ -36,33 +42,23 @@ class Player extends Component {
 		}
 	}
 
-	ref = player => {
-    this.player = player
-  }
+	goInFullscreen = (element) => {
+		if(element.requestFullscreen) element.requestFullscreen(); 
+		else if(element.mozRequestFullScreen) element.mozRequestFullScreen();  
+		else if(element.webkitRequestFullscreen) element.webkitRequestFullscreen(Element.ALLOW_KEYBOARD_INPUT);
+		else if(element.msRequestFullscreen) element.msRequestFullscreen();
+	}
+
+	isFullScreenCurrently = () =>{
+		return (document.fullScreenElement && document.fullScreenElement !== null) || (!document.mozFullScreen && !document.webkitIsFullScreen);
+	}
+
   render () {
 		const { url, controls, playing} = this.state
     return (  
-			<div className='app'>
-        <section className='section'>
-					<div style={{
-									position: 'absolute', left: '50%', top: '50%',
-									transform: 'translate(-50%, -50%)'
-								}} 
-								className='player-wrapper'
-					>
-						<ReactPlayer
-							ref={this.ref}
-							className='react-player'
-							width='auto'
-							height='auto'
-							url={url}
-              playing={playing}
-							controls={controls}
-						/>
-					</div>
-					<button ref="myButton" onClick={this.handleClickFullscreen}>Fullscreen</button>
-				</section>
-			</div>
+			<video controls id="myvideo" allowfullscreen >
+				<source src={url}></source>
+			</video>
 		);
   }
 }

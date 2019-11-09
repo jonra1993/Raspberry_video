@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "onoff": "^5.0.0",
     "react": "^16.11.0",
     "react-dom": "^16.11.0",
     "react-hot-loader": "^4.12.16",
@@ -32,5 +33,4 @@
     ]
   },
   "proxy": "http://localhost:5000"
-
 }
