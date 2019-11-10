@@ -21,7 +21,7 @@ try:
     while True:
         if ( GPIO.input(button) == False ): # Button was pressed
             print("Button Pressed")
-            os.system('omxplayer -o hdmi assets/Cam3D.MP4 &')
+            os.system('omxplayer -o hdmi assets/Cam3D.mp4 &')
             sleep(15)
 except KeyboardInterrupt:
     pass
