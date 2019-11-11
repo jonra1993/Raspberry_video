@@ -6,10 +6,7 @@ This a project which uses omxplayer in order to play a video through GPIO2 in a 
 </p>
 
 <p align="center">
-<video width="100%" controls>
-  <source src="https://mega.nz/#!y9tz2IpZ!d_0xNAKIeETheC7AT5FQ1GVkp_OiOllC4qo6xMnNoBQ" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe width="640" height="360" frameborder="0" src="https://mega.nz/embed#!y9tz2IpZ!d_0xNAKIeETheC7AT5FQ1GVkp_OiOllC4qo6xMnNoBQ" allowfullscreen></iframe>
 </p>
 
 The video is [here](https://mega.nz/#!y9tz2IpZ!d_0xNAKIeETheC7AT5FQ1GVkp_OiOllC4qo6xMnNoBQ)
