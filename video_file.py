@@ -8,7 +8,7 @@ import RPi.GPIO as GPIO
 import logging
 logging.basicConfig(level=logging.INFO)
 
-#GIO
+#GPIO. button is conected to GPIO2
 GPIO.setmode(GPIO.BCM)      # set up BCM GPIO numbering
 GPIO.setwarnings(False)
 button = 2
@@ -35,7 +35,7 @@ player_stop = OMXPlayer(BLACK_PATH,
 # it takes about this long for omxplayer to warm up and start displaying a picture on a rpi3
 player_action.pause()
 sleep(2.5)
-
+player_stop.pause()
 try:
     while True:
          # Button was pressed
@@ -48,7 +48,6 @@ try:
                     sleep(1)
                     player_action = OMXPlayer(VIDEO_PATH, dbus_name='org.mpris.MediaPlayer2.omxplayer1')
                 else:
-                    player_stop.pause()
                     player_action.play()
                     sleep(1)
             except:
@@ -64,5 +63,3 @@ except KeyboardInterrupt:
     except:
         pass
     pass
-
-
