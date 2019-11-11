@@ -2,7 +2,7 @@
 This a project which uses omxplayer in order to play a video through GPIO2 in a Raspberry pi 3.
 
 <p align="center">
-  <img height="410" width="720" src="https://mega.nz/#!ngMVSYLK!628huf1NjePZr89m35ESsS0XpysqE2v1zVsEEXlX_-o">
+  <img height="410" width="720" src="assets/raspberry_video.png">
 </p>
 
 <p align="center">
