@@ -20,6 +20,11 @@ The video is [here](https://mega.nz/#!y9tz2IpZ!d_0xNAKIeETheC7AT5FQ1GVkp_OiOllC4
   - Install omxplayer
   - Install omxplayer_python_wrapper
 
+# Run at startup
+  - Copy al files into root folder
+  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+  - add this line @lxterminal --command="./script.sh"
+
 ## License
 
 [![License](http://img.shields.io/:license-mit-blue.svg?style=flat-square)](http://badges.mit-license.org)
