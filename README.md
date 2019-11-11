@@ -11,13 +11,24 @@ This a project which uses omxplayer in order to play a video through GPIO2 in a 
 
 The video is [here](https://mega.nz/#!y9tz2IpZ!d_0xNAKIeETheC7AT5FQ1GVkp_OiOllC4qo6xMnNoBQ)
 
-# Instructions
+## Instructions
   - Setup Raspbian
   - Install python3
   - Install omxplayer
   - Install omxplayer_python_wrapper
 
-# Run at startup
+
+## Setup
+
+> update and install this package first
+
+```shell
+$ sudo apt-get update && sudo apt-get install -y omxplayer
+$ sudo apt-get update && sudo apt-get install -y libdbus-1-dev
+$ pip3 install omxplayer-wrapper
+```
+
+## Run at startup
   - Copy al files into root folder
   - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
   - add this line @lxterminal --command="./script.sh"
