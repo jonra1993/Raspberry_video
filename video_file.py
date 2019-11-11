@@ -1,4 +1,5 @@
 #!/usr/bin/env python3
+
 from omxplayer.player import OMXPlayer
 from pathlib import Path
 from time import sleep
@@ -7,15 +8,7 @@ import RPi.GPIO as GPIO
 import logging
 logging.basicConfig(level=logging.INFO)
 
-"""
-Startup
-https://learn.sparkfun.com/tutorials/how-to-run-a-raspberry-pi-program-on-startup/all
-
-sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-(sleep 120;sudo python3 /home/pi/Desktop/Raspberry_video/video_file.py) &
-"""
-
-#GPIO. button is conected to GPIO2
+#GIO
 GPIO.setmode(GPIO.BCM)      # set up BCM GPIO numbering
 GPIO.setwarnings(False)
 button = 2
@@ -70,3 +63,5 @@ except KeyboardInterrupt:
     except:
         pass
     pass
+
+
