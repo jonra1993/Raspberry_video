@@ -20,7 +20,7 @@ The video is [here](https://mega.nz/#!y9tz2IpZ!d_0xNAKIeETheC7AT5FQ1GVkp_OiOllC4
 
 ## Setup
 
-> update and install this package first
+> update and install these package first
 
 ```shell
 $ sudo apt-get update && sudo apt-get install -y omxplayer
