@@ -30,8 +30,11 @@ $ pip3 install omxplayer-wrapper
 
 ## Run at startup
   - Copy al files into root folder
-  - sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
-  - add this line @lxterminal --command="./script.sh"
+  - Open autostart file
+  ```shell
+    $ sudo nano /etc/xdg/lxsession/LXDE-pi/autostart
+  ```
+  - Add this line @lxterminal --command="./script.sh"
 
 ## License
 
